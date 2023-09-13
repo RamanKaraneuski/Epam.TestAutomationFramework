@@ -7,7 +7,7 @@ namespace Epam.TestAutomation.Web.PageObjects.Panels
     {
         public FooterBlock(By locator) : base(locator) { }
 
-        public Link EpamContinuumLinks => new Link(By.XPath("//*[@class='footer__brands-link']"));
+        public Link EpamContinuumLinks => new Link(By.XPath("//*[@class='footer-links']"));
 
         public ElementsList<Link> FooterLinks => new ElementsList<Link>(By.ClassName("footer__links-item"));
 

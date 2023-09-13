@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -15,14 +15,16 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="SpecFlow" Version="3.9.74" />
-    <PackageReference Include="SpecFlow.NUnit" Version="3.9.74" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Epam.TestAutomation.Utilities\Epam.TestAutomation.Utilities.csproj" />
-    <ProjectReference Include="..\Epam.TestAutomation.Web\Epam.TestAutomation.Web.csproj" />
-    <ProjectReference Include="..\Epam.TestAutomation\Epam.TestAutomation.Core.csproj" />
+    <ProjectReference Include="..\Epam.TestAutomation.API\TestAutomation.API.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
