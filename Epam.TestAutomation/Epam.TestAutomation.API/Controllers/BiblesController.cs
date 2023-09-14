@@ -22,9 +22,9 @@ namespace Epam.TestAutomation.API.Controllers
         {
         }
 
-        private const string AllBiblesResource = "/v1/bibles";
+        private const string AllBiblesResource = "/v1/audio-bibles";
 
-        private const string SingleBibleResource = "/v1/bibles/{0}";
+        private const string SingleBibleResource = "/v1/audio-bibles/{0}";
 
         /// <summary>
         /// Request that receive all list of bibles

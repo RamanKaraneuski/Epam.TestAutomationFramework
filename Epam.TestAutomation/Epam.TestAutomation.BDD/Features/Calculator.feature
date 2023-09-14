@@ -31,8 +31,8 @@ Scenario Outline: Calculator - Check Diff
 Examples: 
 | operand1 | operand2 | result |
 | 2        | 1        | 1      |
-| 8        | 3        | 4      |
-| 14       | 4        | 10     |
+| 8        | 4        | 4      |
+| 14       | 4       | 10     |
 
 @Sum
 @Smoke
