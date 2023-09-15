@@ -12,7 +12,7 @@ namespace Epam.TestAutomation.API.Models.SharedMoels.Phone
         public string color { get; set; }
         public string capacity { get; set; }
 
-        [JsonProperty("capacity GB")]
+        //[JsonProperty("capacity GB")]
         public int CapacityGb { get; set; }
 
         public float price { get; set; }
