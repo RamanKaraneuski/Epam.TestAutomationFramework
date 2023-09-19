@@ -119,5 +119,26 @@ namespace Epam.TestAutomation.BDD.DataDrivenTestingTests
                 Assert.AreEqual(errorMessage, errorMessageElement.Text, "Error message does not match the expected value.");
             }
         }
+
+        //public static void CheckSearchResultsLocation1(string locationCountry, string locationCity)
+        //{
+        //    Logger.Info($"Step: Checking search results for location - Country: {locationCountry}, City: {locationCity}");
+
+        //    // Пример: Проверяем, что результаты поиска содержат указанное местоположение
+        //    string searchResultsText = BrowserFactory.Browser.FindElement(Locators.SearchResults).Text;
+        //    string expectedLocation = $"{locationCountry}, {locationCity}";
+        //    Assert.IsTrue(searchResultsText.Contains(expectedLocation), $"Search results do not contain the location: {expectedLocation}");
+        //}
+
+        //public static void CheckSearchResultsSkills1(string skillsOne, string skillsTwo)
+        //{
+        //    Logger.Info("Step: Check search results");
+
+        //    foreach (var expectedResult in expectedResults)
+        //    {
+        //        var resultElements = BrowserFactory.Browser.FindElements(Locators.SearchResultElement(expectedResult));
+        //        Assert.IsTrue(resultElements.Count > 0, $"Result for keyword '{skillsOne}' '{skillsTwo}' is not found: {expectedResult}");
+        //    }
+        //}
     }
 }
