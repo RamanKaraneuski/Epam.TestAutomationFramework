@@ -20,25 +20,25 @@ namespace Epam.TestAutomation.BDD.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Search by Keyword")]
-    [NUnit.Framework.CategoryAttribute("SearchByKeyword")]
-    public partial class SearchByKeywordFeature
+    [NUnit.Framework.DescriptionAttribute("Cookie Banner Test")]
+    [NUnit.Framework.CategoryAttribute("CookieBanner")]
+    public partial class CookieBannerTestFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private static string[] featureTags = new string[] {
-                "SearchByKeyword"};
+                "CookieBanner"};
         
-#line 1 "SearchByKeyword.feature"
+#line 1 "CookieBanner.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Search by Keyword", "  As a user\r\n  I want to be able to search for jobs by keyword\r\n  In order to fin" +
-                    "d relevant job listings", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Cookie Banner Test", "  As a user\r\n  I want to see and interact with the cookie banner\r\n  So that I can" +
+                    " manage my cookie preferences", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -77,12 +77,12 @@ namespace Epam.TestAutomation.BDD.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Perform a keyword search")]
-        public void PerformAKeywordSearch()
+        [NUnit.Framework.DescriptionAttribute("Open the page and verify the cookie banner")]
+        public void OpenThePageAndVerifyTheCookieBanner()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Perform a keyword search", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open the page and verify the cookie banner", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 7
   this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -94,22 +94,23 @@ namespace Epam.TestAutomation.BDD.Features
             {
                 this.ScenarioStart();
 #line 8
-    testRunner.Given("I navigate to Landing Page of Epam site1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I navigate to the main page of the Epam website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 9
-    testRunner.When("I accept all cookies on Epam Site1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.Then("I should see the cookie banner", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 10
-    testRunner.When("Go to the “Careers” -> “Join our Team” section1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.And("the cookie banner should contain the text \"This website uses cookies for analytic" +
+                        "s, personalization and advertising.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 11
-    testRunner.When("I enter keyword \"QA Testing Team Lead\" in the search field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.And("the cookie banner should have a \"Cookies Settings\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 12
-    testRunner.When("I press the \"Find\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.And("the cookie banner should have an \"Accept All\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 13
-    testRunner.Then("I check that the search results contain \"QA Testing Team Lead\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.And("the cookie banner should have ana \"Accept All\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
