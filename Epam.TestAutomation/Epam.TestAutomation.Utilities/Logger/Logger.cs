@@ -19,7 +19,13 @@ namespace Epam.TestAutomation.Utilities.Logger
             _logger = new LoggerConfiguration()
                 .WriteTo.File(Path.Combine(pathToFolder, loggerName + ".txt"), rollingInterval: RollingInterval.Day)
                 .CreateLogger();
-
+        }
+        public static void DisposeLogger()
+        {
+            if (_logger is IDisposable disposableLogger)
+            {
+                disposableLogger.Dispose();
+            }
         }
     }
 }
