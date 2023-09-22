@@ -83,7 +83,7 @@ namespace Epam.TestAutomation.Web.PageObjects.Pages
         {
             OpenBaseUrl();
             var languagesDropdown = _driver.FindElement(By.CssSelector(".location-selector__button"));
-            languagesDropdown.Click();
+            languagesDropdown.Click(); Thread.Sleep(1000);
 
             var languagesList = _wait.Until(driver => driver.FindElements(By.CssSelector(".location-selector__link")));
 

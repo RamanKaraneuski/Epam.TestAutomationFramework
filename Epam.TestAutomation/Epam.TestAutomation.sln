@@ -13,12 +13,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Epam.TestAutomation.Tests",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Epam.TestAutomation.TestData", "Epam.TestAutomation.TestData\Epam.TestAutomation.TestData.csproj", "{CEBC606A-9A57-4909-87CC-3A52BD87365E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Epam.TestAutomation.BDD", "Epam.TestAutomation.BDD\Epam.TestAutomation.BDD.csproj", "{74A9D01B-BB7E-43C5-80D8-B3407796728A}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestAutomation.API", "Epam.TestAutomation.API\TestAutomation.API.csproj", "{074EC07F-3846-4D24-B1D6-4ADB974BE7D7}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestAutomation.API.Tests", "Epam.TestAutomation.API.Tests\TestAutomation.API.Tests.csproj", "{21C1C741-845E-4B2F-8FCD-3A55765122C6}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestsRunsettings", "TestsRunsettings", "{B364F5F1-98C1-40AE-942A-735587295447}"
 	ProjectSection(SolutionItems) = preProject
 		Epam.runsettings = Epam.runsettings
@@ -50,18 +44,6 @@ Global
 		{CEBC606A-9A57-4909-87CC-3A52BD87365E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CEBC606A-9A57-4909-87CC-3A52BD87365E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CEBC606A-9A57-4909-87CC-3A52BD87365E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{74A9D01B-BB7E-43C5-80D8-B3407796728A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{74A9D01B-BB7E-43C5-80D8-B3407796728A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{74A9D01B-BB7E-43C5-80D8-B3407796728A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{74A9D01B-BB7E-43C5-80D8-B3407796728A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{074EC07F-3846-4D24-B1D6-4ADB974BE7D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{074EC07F-3846-4D24-B1D6-4ADB974BE7D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{074EC07F-3846-4D24-B1D6-4ADB974BE7D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{074EC07F-3846-4D24-B1D6-4ADB974BE7D7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{21C1C741-845E-4B2F-8FCD-3A55765122C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{21C1C741-845E-4B2F-8FCD-3A55765122C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{21C1C741-845E-4B2F-8FCD-3A55765122C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{21C1C741-845E-4B2F-8FCD-3A55765122C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
