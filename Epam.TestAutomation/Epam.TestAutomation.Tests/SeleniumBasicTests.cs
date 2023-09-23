@@ -16,8 +16,7 @@ using Epam.TestAutomation.Web.PageObjects.Pages;
 namespace Epam.TestAutomation.Tests
 {
     [TestFixture]
-    [Parallelizable(scope: ParallelScope.All)]
-    public class SeleniumAdvancedTestOne
+    public class Selenium_AdvancedTest
     {
         [SetUp]
         public void Setup()
@@ -37,23 +36,6 @@ namespace Epam.TestAutomation.Tests
             var loginPage = new LoginPage(WebDriverManager.Driver);
             loginPage.PerformSearchAndVerifyResults();
         }
-    }
-
-    [TestFixture]
-    [Parallelizable(scope: ParallelScope.All)]
-    public class SeleniumAdvancedTestTwo
-    {
-        [SetUp]
-        public void Setup()
-        {
-            WebDriverManager.Initialize();
-        }
-
-        [TearDown]
-        public void TearDown()
-        {
-            WebDriverManager.Quit();
-        }
 
         [Test]
         public void CheckLanguageDropdown()
@@ -61,46 +43,12 @@ namespace Epam.TestAutomation.Tests
             var loginPage = new LoginPage(WebDriverManager.Driver);
             loginPage.PerformLanguageDropdownCheck();
         }
-    }
-
-    [TestFixture]
-    [Parallelizable(scope: ParallelScope.All)]
-    public class SeleniumAdvancedTestThree
-    {
-        [SetUp]
-        public void Setup()
-        {
-            WebDriverManager.Initialize();
-        }
-
-        [TearDown]
-        public void TearDown()
-        {
-            WebDriverManager.Quit();
-        }
 
         [Test]
         public void CheckCareersLocationPage()
         {
             var loginPage = new LoginPage(WebDriverManager.Driver);
             loginPage.PerformCareersLocationPageCheck();
-        }
-    }
-
-    [TestFixture]
-    [Parallelizable(scope: ParallelScope.All)]
-    public class SeleniumAdvancedTestFour
-    {
-        [SetUp]
-        public void Setup()
-        {
-            WebDriverManager.Initialize();
-        }
-
-        [TearDown]
-        public void TearDown()
-        {
-            WebDriverManager.Quit();
         }
 
         [Test]
@@ -110,23 +58,6 @@ namespace Epam.TestAutomation.Tests
             loginPage.OpenBaseUrl();
 
             Assert.AreEqual(ConfigurationHelper.BaseUrl, WebDriverManager.Driver.Url);
-        }
-    }
-
-    [TestFixture]
-    [Parallelizable(scope: ParallelScope.All)]
-    public class SeleniumAdvancedTestFive
-    {
-        [SetUp]
-        public void Setup()
-        {
-            WebDriverManager.Initialize();
-        }
-
-        [TearDown]
-        public void TearDown()
-        {
-            WebDriverManager.Quit();
         }
 
         [Test]
@@ -144,23 +75,6 @@ namespace Epam.TestAutomation.Tests
             WebDriverManager.Driver.Navigate().Back();
 
             Assert.AreEqual(howWeDoItUrl, WebDriverManager.Driver.Url);
-        }
-    }
-
-    [TestFixture]
-    [Parallelizable(scope: ParallelScope.All)]
-    public class SeleniumAdvancedTestSix
-    {
-        [SetUp]
-        public void Setup()
-        {
-            WebDriverManager.Initialize();
-        }
-
-        [TearDown]
-        public void TearDown()
-        {
-            WebDriverManager.Quit();
         }
 
         [Test]
@@ -180,23 +94,6 @@ namespace Epam.TestAutomation.Tests
             WebDriverManager.Driver.Navigate().Back();
 
             Assert.AreEqual(howWeDoItUrl, WebDriverManager.Driver.Url);
-        }
-    }
-
-    [TestFixture]
-    [Parallelizable(scope: ParallelScope.All)]
-    public class SeleniumAdvancedTestSeven
-    {
-        [SetUp]
-        public void Setup()
-        {
-            WebDriverManager.Initialize();
-        }
-
-        [TearDown]
-        public void TearDown()
-        {
-            WebDriverManager.Quit();
         }
 
         [Test]
