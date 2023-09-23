@@ -16,6 +16,7 @@ using Epam.TestAutomation.Web.PageObjects.Pages;
 namespace Epam.TestAutomation.Tests
 {
     [TestFixture]
+    [Parallelizable(scope: ParallelScope.All)]
     public class Selenium_AdvancedTest
     {
         [SetUp]
