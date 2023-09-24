@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using Epam.TestAutomation.API.Controllers;
 using Epam.TestAutomation.API.Models.RequesModels.Phone;
 using Epam.TestAutomation.API.Models.ResponseModels.Phone;
@@ -20,7 +18,7 @@ namespace Epam.TestAutomation.API.Tests
         public void VerifyAllPhonesResponse()
         {
             var response = new PhoneController(new CustomRestClient()).GetPhones<List<Phone>>();
-            Assert.That(response.Response.StatusCode, Is.EqualTo(HttpStatusCode.OK), "Invalid status code for GET /objects request!");
+            Assert.That(response.Response.StatusCode, Is.EqualTo(HttpStatusCode.OK), "Error: invalid status code for GET request /objects!");
         }
 
         [Test]
@@ -29,7 +27,7 @@ namespace Epam.TestAutomation.API.Tests
             var phone = new PhoneController(new CustomRestClient()).GetPhones<List<Phone>>().AllPhones.First();
 
             var response = new PhoneController(new CustomRestClient()).GetPhone<Phone>(phone.id);
-            Assert.That(response.Response.StatusCode, Is.EqualTo(HttpStatusCode.OK), "Invalid status code for GET /objects/{id} request!");
+            Assert.That(response.Response.StatusCode, Is.EqualTo(HttpStatusCode.OK), "Error: invalid status code for GET request /objects/{id}!");
         }
 
         [Test]
@@ -49,7 +47,7 @@ namespace Epam.TestAutomation.API.Tests
 
             var receivedPhone = new PhoneController(new CustomRestClient()).GetPhone<Phone>(createdPhone.id).Phone;
 
-            Assert.That(receivedPhone, Is.Not.Null, $"Phone with id {createdPhone.id} was not created!");
+            Assert.That(receivedPhone, Is.Not.Null, $"Error: phone with id {createdPhone.id} was not created!");
         }
 
         [Test]
@@ -66,10 +64,10 @@ namespace Epam.TestAutomation.API.Tests
 
             var createdPhone = new PhoneController(new CustomRestClient()).AddPhone<Phone>(phoneToCreate).Phone;
 
-            Assert.AreEqual(512, createdPhone.data.CapacityGb);
+            Assert.AreEqual(512, createdPhone.data.CapacityGb, "Error: phone capacity is incorrect!");
 
             var response = new PhoneController(new CustomRestClient()).DeletePhone<RestResponse>(createdPhone.id);
-            Assert.AreEqual(HttpStatusCode.OK, response.Response.StatusCode);
+            Assert.AreEqual(HttpStatusCode.OK, response.Response.StatusCode, "Error: incorrect status code when deleting a phone!");
         }
 
         [Test]
@@ -89,10 +87,10 @@ namespace Epam.TestAutomation.API.Tests
             var createdPhone = new PhoneController(new CustomRestClient()).AddPhone<Phone>(randomPhone).Phone;
 
             var response = new PhoneController(new CustomRestClient()).DeletePhone<RestResponse>(createdPhone.id);
-            Assert.AreEqual(HttpStatusCode.OK, response.Response.StatusCode);
+            Assert.AreEqual(HttpStatusCode.OK, response.Response.StatusCode, "Error: incorrect status code when deleting a random phone!");
 
             var getResponse = new PhoneController(new CustomRestClient()).GetPhone<Phone>(createdPhone.id);
-            Assert.AreEqual(HttpStatusCode.NotFound, getResponse.Response.StatusCode);
+            Assert.AreEqual(HttpStatusCode.NotFound, getResponse.Response.StatusCode, "Error: incorrect status code when trying to receive a remote phone!");
         }
 
         [Test]
@@ -106,7 +104,6 @@ namespace Epam.TestAutomation.API.Tests
                     CapacityGb = 1024,
                     price = 2000,
                     year = 2026
-
                 }
             };
 
@@ -125,13 +122,14 @@ namespace Epam.TestAutomation.API.Tests
 
             var updateResponse = new PhoneController(new CustomRestClient()).UpdatePhone<Phone>(createdPhone.id, updatedPhoneModel);
 
-            Assert.AreEqual(HttpStatusCode.OK, updateResponse.Response.StatusCode);
+            Assert.AreEqual(HttpStatusCode.OK, updateResponse.Response.StatusCode, "Error: incorrect status code when updating your phone!");
 
             var updatedPhone = new PhoneController(new CustomRestClient()).GetPhone<Phone>(createdPhone.id).Phone;
-            Assert.AreEqual(300, updatedPhone.data.CapacityGb, updatedPhone.data.price);
+            Assert.AreEqual(1025, updatedPhone.data.CapacityGb, "Error: Incorrect phone capacity after update!");
+            Assert.AreEqual(3000, updatedPhone.data.price, "Error: incorrect phone price after update!");
 
             var deleteResponse = new PhoneController(new CustomRestClient()).DeletePhone<RestResponse>(updatedPhone.id);
-            Assert.AreEqual(HttpStatusCode.OK, deleteResponse.Response.StatusCode);
+            Assert.AreEqual(HttpStatusCode.OK, deleteResponse.Response.StatusCode, "Error: incorrect status code when deleting a phone!");
         }
     }
 }
