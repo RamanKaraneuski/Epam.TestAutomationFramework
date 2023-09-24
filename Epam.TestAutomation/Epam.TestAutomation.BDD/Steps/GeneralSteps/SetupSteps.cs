@@ -8,6 +8,7 @@ using Epam.TestAutomation.Helper;
 using Epam.TestAutomation.Utilities.Logger;
 using Epam.TestAutomation.Utils;
 using NUnit.Framework;
+using OpenQA.Selenium.Chrome;
 using TechTalk.SpecFlow;
 
 namespace Epam.TestAutomation.BDD.Steps.GeneralSteps
