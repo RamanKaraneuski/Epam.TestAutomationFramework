@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestAutomation.API", "Epam.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestAutomation.API.Tests", "Epam.TestAutomation.API.Tests\TestAutomation.API.Tests.csproj", "{21C1C741-845E-4B2F-8FCD-3A55765122C6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestsRunsettings", "TestsRunsettings", "{B364F5F1-98C1-40AE-942A-735587295447}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestRunsettings", "TestRunsettings", "{B364F5F1-98C1-40AE-942A-735587295447}"
 	ProjectSection(SolutionItems) = preProject
 		Epam.runsettings = Epam.runsettings
 	EndProjectSection

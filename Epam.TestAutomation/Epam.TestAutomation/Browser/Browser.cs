@@ -16,6 +16,7 @@ namespace Epam.TestAutomation.Core.Browser
         public Browser(IWebDriver driver)
         {
             _driver = driver;
+
         }
 
         public void ScrollToElement(IWebElement element)
@@ -43,6 +44,7 @@ namespace Epam.TestAutomation.Core.Browser
         {
             Logger.Info("Maximize Browser");
             _driver.Manage().Window.Maximize();
+
         }
 
         public void Refresh()

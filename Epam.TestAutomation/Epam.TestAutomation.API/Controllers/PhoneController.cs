@@ -50,5 +50,15 @@ namespace Epam.TestAutomation.API.Controllers
         {
             return Post<T, PhoneModel>(PhonesResource, model);
         }
+
+        public (RestResponse Response, T Phone) DeletePhone<T>(string phoneId)
+        {
+            return Delete<T>(string.Format(SinglePhoneResource, phoneId));
+        }
+
+        public (RestResponse Response, T Phone) UpdatePhone<T>(string phoneId, PhoneModel model)
+        {
+            return Put<T, PhoneModel>(string.Format(SinglePhoneResource, phoneId), model);
+        }
     }
 }
