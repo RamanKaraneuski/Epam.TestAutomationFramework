@@ -4,6 +4,7 @@ using Epam.TestAutomation.Helper;
 using Epam.TestAutomation.Screenshot;
 using Epam.TestAutomation.Utilities.Logger;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 

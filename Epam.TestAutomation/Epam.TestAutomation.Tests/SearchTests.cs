@@ -43,7 +43,7 @@ namespace Epam.TestAutomation.Tests
 
         private static List<SearchModel> GetSearcInformation()
         {
-            return JsonParser.DeserializeJsonToObjects<SearchModel>(@"C:\EPAM_Data\Tuition\TAF\Epam.TestAutomation\Epam.TestAutomation.TestData\Search.json");
+            return JsonParser.DeserializeJsonToObjects<SearchModel>(@"C:\Save Visual Studio and Git\1\TAF\Epam.TestAutomation\Epam.TestAutomation.TestData\Search.json");
         }
     }
 }
