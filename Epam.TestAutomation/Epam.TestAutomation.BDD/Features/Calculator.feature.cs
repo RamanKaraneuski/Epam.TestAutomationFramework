@@ -155,7 +155,7 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.CategoryAttribute("Diff")]
         [NUnit.Framework.CategoryAttribute("Smoke")]
         [NUnit.Framework.TestCaseAttribute("2", "1", "1", null)]
-        [NUnit.Framework.TestCaseAttribute("8", "4", "4", null)]
+        [NUnit.Framework.TestCaseAttribute("8", "3", "4", null)]
         [NUnit.Framework.TestCaseAttribute("14", "4", "10", null)]
         public void Calculator_CheckDiff(string operand1, string operand2, string result, string[] exampleTags)
         {

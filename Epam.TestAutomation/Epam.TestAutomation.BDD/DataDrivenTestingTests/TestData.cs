@@ -14,7 +14,7 @@ namespace Epam.TestAutomation.BDD
     {
         public static IEnumerable<TestCaseData> GetTestData()
         {
-            var testDataJson = System.IO.File.ReadAllText("keywordTestData.json");
+            var testDataJson = System.IO.File.ReadAllText("C:\\Save Visual Studio and Git\\1\\TAF\\Epam.TestAutomation\\Epam.TestAutomation.BDD\\DataDrivenTestingTests\\keywordTestData.json");
             var testData = JArray.Parse(testDataJson);
 
             foreach (var item in testData)
@@ -28,7 +28,7 @@ namespace Epam.TestAutomation.BDD
 
         public static IEnumerable<TestCaseData> GetLocationTestData()
         {
-            var testDataJson = File.ReadAllText("locationTestData.json");
+            var testDataJson = File.ReadAllText("C:\\Save Visual Studio and Git\\1\\TAF\\Epam.TestAutomation\\Epam.TestAutomation.BDD\\DataDrivenTestingTests\\locationTestData.json");
             var testData = JArray.Parse(testDataJson);
 
             foreach (var item in testData)
@@ -43,7 +43,7 @@ namespace Epam.TestAutomation.BDD
         }
         public static IEnumerable<TestCaseData> GetSkillsTestData()
         {
-            var testDataJson = System.IO.File.ReadAllText("skillsTestData.json");
+            var testDataJson = System.IO.File.ReadAllText("C:\\Save Visual Studio and Git\\1\\TAF\\Epam.TestAutomation\\Epam.TestAutomation.BDD\\DataDrivenTestingTests\\skillsTestData.json");
             var testData = JArray.Parse(testDataJson);
 
             foreach (var item in testData)
@@ -59,7 +59,7 @@ namespace Epam.TestAutomation.BDD
 
         public static IEnumerable<TestCaseData> GetCombinedTestData()
         {
-            var testDataJson = System.IO.File.ReadAllText("combinedTestData.json");
+            var testDataJson = System.IO.File.ReadAllText("C:\\Save Visual Studio and Git\\1\\TAF\\Epam.TestAutomation\\Epam.TestAutomation.BDD\\DataDrivenTestingTests\\combinedTestData.json");
             var testData = JArray.Parse(testDataJson);
 
             foreach (var item in testData)
@@ -78,7 +78,7 @@ namespace Epam.TestAutomation.BDD
 
         public static IEnumerable<TestCaseData> GetCombinedTestDataAndErrorChecking()
         {
-            var testDataJson = File.ReadAllText("combinedTestDataErrorChecking.json");
+            var testDataJson = File.ReadAllText("C:\\Save Visual Studio and Git\\1\\TAF\\Epam.TestAutomation\\Epam.TestAutomation.BDD\\DataDrivenTestingTests\\combinedTestDataErrorChecking.json");
             var testData = JArray.Parse(testDataJson);
 
             foreach (var item in testData)

@@ -1,0 +1,7 @@
+[
+  {
+    "locationCountry": "Armenia",
+    "locationCity": "Gyumri",
+    "expectedResults": [ "Armenia", "Gyumri" ]
+  }
+]
